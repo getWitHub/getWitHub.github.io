@@ -5,8 +5,13 @@
         "weight": 1
     },
     {
-        "name": "Contact",
-        "url": "/contact/",
-        "weight": 2
+        "name": "About",
+        "url": "/team/",
+        "weight": 1
+    },
+    {
+        "name": "Request your invite",
+        "url": "/invite/",
+        "weight": 4
     }
 ]
