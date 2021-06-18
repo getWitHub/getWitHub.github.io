@@ -18,7 +18,7 @@ const Home = props => {
       <Helmet>
         <meta
           name="description"
-          content="Small Business Theme. Multiple content types using Markdown and JSON sources. Responsive design and SCSS. This is a beautiful and artfully designed starting theme."
+          content="Highlight the web"
         />
       </Helmet>
 
@@ -46,8 +46,7 @@ const Home = props => {
                 <div key={node.id} className="col-12 col-md-4 mb-1">
                   <div className="service service-summary">
                     <div className="service-content">
-                      <h2 className="service-title">
-                        <Link to={node.fields.slug}>{node.frontmatter.title}</Link>
+                      <h2 className="service-title">{node.frontmatter.title}
                       </h2>
                       <p>{node.excerpt}</p>
                     </div>
@@ -56,9 +55,7 @@ const Home = props => {
               ))}
             </div>
             <div className="row justify-content-center">
-              <div className="col-auto">
-                <Link className="button button-primary" to="/services/">View All Services</Link>
-              </div>
+
             </div>
           </div>
         </div>

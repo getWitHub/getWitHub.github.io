@@ -1,17 +1,17 @@
 [
   {
-    "title": "Free Consultation",
-    "description": "New clients recieve an obligation free consultation.",
-    "image": "/images/features/noun_branding_1885335.svg"
+    "title": "Developers",
+    "description": "Keep all your code snippets in one place, easy to find when you need them!",
+    "image": "images/features/developerIcon.svg"
   },
   {
-    "title": "Certified Accountants",
-    "description": "All members of our team are certified accountants.",
-    "image": "/images/features/noun_The Process_1885341.svg"
+    "title": "Writers",
+    "description": "Save text highlights from the web and collect inspiration for your next big article.",
+    "image": "images/features/writersIcon.svg"
   },
   {
-    "title": "Tax Compliance",
-    "description": "We stay up to date on the latest changes to the tax code.",
-    "image": "/images/features/noun_3d modeling_1885342.svg"
+    "title": "Everyone",
+    "description": "Use it for your reading lists, your web notes, your recipes or all of the above. There are no rules. ",
+    "image": "images/features/everyoneIcon1.svg"
   }
 ]

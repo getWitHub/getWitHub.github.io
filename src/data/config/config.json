@@ -13,14 +13,14 @@
         "meta_og_title": "WitHub",
         "meta_og_type": "website",
         "meta_og_url": "https://hugo-gatsby.netlify.app",
-        "meta_og_image": "https://www.zerostatic.io/theme/gatsby-serif/gatsby-serif-screenshot.png",
+        "meta_og_image": "static/images/logo/logo.svg",
         "meta_og_description": "Highlight the web like just like a book",
         "meta_twitter_card": "summary",
-        "meta_twitter_site": "@zerostaticio",
-        "meta_twitter_creator": "@zerostaticio"
+        "meta_twitter_site": "@getwithub",
+        "meta_twitter_creator": "@getwithub"
     },
     "footer": {
-        "copyright_text": "Free Gatsby theme by",
-        "copyright_link": "https://www.zerostatic.io"
+        "copyright_text": "All rights reserved, WitHub 2021"
+        
     }
 }
