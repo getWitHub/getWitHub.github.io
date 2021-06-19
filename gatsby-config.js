@@ -3,14 +3,16 @@ const guid = process.env.NETLIFY_GOOGLE_ANALYTICS_ID;
 module.exports = {
   siteMetadata: {
     title: 'WitHub',
-    description: 'Highlight the web'
-    // pathPrefix: '/getWitHub.github.io'
+    description: 'Highlight the web',
+    pathPrefix: '/getWitHub',
+    siteUrl: `https://www.getwithub.com`
   },
   plugins: [
     'gatsby-plugin-sass',
     'gatsby-transformer-json',
     'gatsby-transformer-remark',
     'gatsby-plugin-react-helmet',
+    `gatsby-plugin-sitemap`,
     `gatsby-plugin-scroll-reveal`,
     {
       resolve: 'gatsby-source-filesystem',
@@ -36,7 +38,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-google-analytics',
       options: {
-        trackingId: guid || 'UA-XXX-1',
+        trackingId: guid || 'G-EWQ3SKYRCK',
         // Puts tracking script in the head instead of the body
         head: false
       }
