@@ -22,7 +22,7 @@ const Home = props => {
         />
       </Helmet>
 
-      <div className="intro">
+      <div data-sal="slide-up" data-sal-duration="300" data-sal-easing="ease-in" className="intro">
         <div className="container">
           <div className="row justify-content-start">
             <div className="col-12 col-md-7 col-lg-6 order-2 order-md-1">
@@ -44,7 +44,7 @@ const Home = props => {
             <div className="row justify-content-start">
               {services.map(({ node }) => (
                 <div key={node.id} className="col-12 col-md-4 mb-1">
-                  <div className="service service-summary">
+                  <div data-sal="slide-up" data-sal-duration="300" data-sal-delay="300" data-sal-easing="ease-in" className="service service-summary">
                     <div className="service-content">
                       <h2 className="service-title">{node.frontmatter.title}
                       </h2>
@@ -67,7 +67,7 @@ const Home = props => {
             <div className="row justify-content-center">
               {features.map(({ node }) => (
                 <div key={node.id} className="col-12 col-md-6 col-lg-4 mb-2">
-                  <div className="feature">
+                  <div data-sal="slide-up" data-sal-duration="500" className="feature" data-sal-easing="ease-out">
                     {node.image && (
                       <div className="feature-image">
                         <img src={node.image} />
