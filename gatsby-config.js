@@ -3,8 +3,8 @@ const guid = process.env.NETLIFY_GOOGLE_ANALYTICS_ID;
 module.exports = {
   siteMetadata: {
     title: 'WitHub',
-    description: 'Highlight the web'
-    // pathPrefix: '/getWitHub.github.io'
+    description: 'Highlight the web',
+    pathPrefix: '/getWitHub.github.io'
   },
   plugins: [
     'gatsby-plugin-sass',
