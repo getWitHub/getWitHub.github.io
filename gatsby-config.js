@@ -4,7 +4,7 @@ module.exports = {
   siteMetadata: {
     title: 'WitHub',
     description: 'Highlight the web',
-    pathPrefix: '/getWitHub.github.io'
+    pathPrefix: '/getWitHub'
   },
   plugins: [
     'gatsby-plugin-sass',
@@ -36,7 +36,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-google-analytics',
       options: {
-        trackingId: guid || 'UA-XXX-1',
+        trackingId: guid || 'UA-XXX-X',
         // Puts tracking script in the head instead of the body
         head: false
       }
