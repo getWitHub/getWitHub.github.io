@@ -4,15 +4,14 @@ module.exports = {
   siteMetadata: {
     title: 'WitHub',
     description: 'Highlight the web',
-    pathPrefix: '/getWitHub',
-    siteUrl: `https://www.getwithub.com`
+    pathPrefix: '/getWitHub'
+    // siteUrl: `https://www.getwithub.com`
   },
   plugins: [
     'gatsby-plugin-sass',
     'gatsby-transformer-json',
     'gatsby-transformer-remark',
     'gatsby-plugin-react-helmet',
-    `gatsby-plugin-sitemap`,
     `gatsby-plugin-scroll-reveal`,
     {
       resolve: 'gatsby-source-filesystem',
@@ -38,7 +37,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-google-analytics',
       options: {
-        trackingId: guid || 'G-EWQ3SKYRCK',
+        trackingId: guid || 'UA-XXX-X',
         // Puts tracking script in the head instead of the body
         head: false
       }
