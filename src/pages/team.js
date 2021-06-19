@@ -114,4 +114,5 @@ export const query = graphql`
   }
 `;
 
+
 export default Team;

@@ -4,6 +4,7 @@ module.exports = {
   siteMetadata: {
     title: 'WitHub',
     description: 'Highlight the web'
+    // pathPrefix: '/getWitHub.github.io'
   },
   plugins: [
     'gatsby-plugin-sass',

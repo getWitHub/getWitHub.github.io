@@ -22,6 +22,7 @@ const Service = ({ data }) => {
   );
 };
 
+
 export const query = graphql`
   query($id: String!) {
     markdownRemark(id: { eq: $id }) {

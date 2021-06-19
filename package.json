@@ -6,7 +6,8 @@
   "scripts": {
     "develop": "gatsby develop",
     "start": "npm run develop",
-    "build": "gatsby build"
+    "build": "gatsby build",
+    "deploy": "gatsby build && gh-pages -d src"
   },
   "engines": {
     "node": ">=12"

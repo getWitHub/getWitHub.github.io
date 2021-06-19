@@ -5,4 +5,4 @@ featured: true
 weight: 1
 ---
 
-<span style="background-color:yellow;">Highlight and annotate directly on webpages.</span>
+Highlight and annotate directly on webpages.

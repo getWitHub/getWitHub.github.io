@@ -60,25 +60,6 @@ exports.createPages = ({ graphql, actions }) => {
                 }
               }
             }
-            basic: allMarkdownRemark(
-              filter: { fileAbsolutePath: { regex: "content/basic\/.*/" } }
-            ) {
-              edges {
-                node {
-                  id
-                  excerpt
-                  html
-                  frontmatter {
-                    title
-                    path
-                    template
-                  }
-                  fields {
-                    slug
-                  }
-                }
-              }
-            }
           }
         `,
       ).then(result => {
@@ -102,19 +83,19 @@ exports.createPages = ({ graphql, actions }) => {
             }
           });
         });
-        result.data.basic.edges.forEach(({ node }) => {
-          let component = path.resolve('src/templates/basic.js');
-          if (node.frontmatter.template) {
-            component = path.resolve(`src/templates/${node.frontmatter.template}.js`);
-          }
-          createPage({
-            path: node.frontmatter.path ? node.frontmatter.path : node.fields.slug,
-            component,
-            context: {
-              id: node.id
-            }
-          });
-        });
+        // result.data.basic.edges.forEach(({ node }) => {
+        //   let component = path.resolve('src/templates/basic.js');
+        //   if (node.frontmatter.template) {
+        //     component = path.resolve(`src/templates/${node.frontmatter.template}.js`);
+        //   }
+        //   createPage({
+        //     path: node.frontmatter.path ? node.frontmatter.path : node.fields.slug,
+        //     component,
+        //     context: {
+        //       id: node.id
+        //     }
+        //   });
+        // });
         resolve();
       }),
     );
