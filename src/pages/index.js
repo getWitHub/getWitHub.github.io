@@ -15,12 +15,7 @@ const Home = props => {
   return (
     <Layout bodyClass="page-home">
       <SEO title={site.title} />
-      <Helmet>
-        <meta
-          name="description"
-          content="Highlight the web"
-        />
-      </Helmet>
+      <Helmet />
 
       <div data-sal="slide-up" data-sal-duration="300" data-sal-easing="ease-in" className="intro">
         <div className="container">

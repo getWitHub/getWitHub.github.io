@@ -4,7 +4,10 @@ module.exports = {
   siteMetadata: {
     title: 'WitHub',
     description: 'Highlight the web',
-    pathPrefix: '/getWitHub'
+    pathPrefix: '/getWitHub',
+    keywords:'withub , highlight, notes, productivity, knowledge , productivity tools',
+    author: '@getwithub',
+    image: 'src/static/twitter-card.png'
   },
   plugins: [
     'gatsby-plugin-sass',
