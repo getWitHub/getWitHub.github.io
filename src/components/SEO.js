@@ -1,5 +1,7 @@
 import React from 'react';
-import Helmet from 'react-helmet';
+import { Helmet } from 'react-helmet';
+import PropTypes from 'prop-types';
+// import { useLocation } from '@reach/router';
 import { useStaticQuery, graphql } from 'gatsby';
 
 function SEO({ description, lang, meta, title}) {
@@ -86,12 +88,12 @@ SEO.defaultProps = {
   description: ``
 };
 
-// SEO.propTypes = {
-//   description: PropTypes.string,
-//   image: PropTypes.string,
-//   lang: PropTypes.string,
-//   meta: PropTypes.arrayOf(PropTypes.object),
-//   title: PropTypes.string.isRequired
-// };
+SEO.propTypes = {
+  description: PropTypes.string,
+  image: PropTypes.string,
+  lang: PropTypes.string,
+  meta: PropTypes.arrayOf(PropTypes.object),
+  title: PropTypes.string.isRequired
+};
 
 export default SEO;

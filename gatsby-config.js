@@ -7,7 +7,7 @@ module.exports = {
     pathPrefix: '/getWitHub',
     keywords:'withub , highlight, notes, productivity, knowledge , productivity tools',
     author: '@getwithub',
-    image: 'src/static/twitter-card.png'
+    image: '/images/twitter-card.png'
   },
   plugins: [
     'gatsby-plugin-sass',
