@@ -15,12 +15,17 @@
         "meta_og_url": "https://www.getwithub.com",
         "meta_og_image": "/images/logo/logo-mobile.svg",
         "meta_og_description": "Highlight the web like just like a book",
-        "meta_twitter_card": "Highlight the web like just like a book",
+        "meta_twitter_card": "summary",
         "meta_twitter_site": "@getwithub",
-        "meta_twitter_creator": "@getwithub"
+        "meta_twitter_creator": "@getwithub",
+        "meta_twitter_image": "/images/twitter-card.png", 
+        "meta_twitter_title":"WitHub",
+        "meta_twitter_description":"Highlight the web like just like a book"
+
     },
     "footer": {
         "copyright_text": "All rights reserved, WitHub 2021"
         
     }
 }
+
