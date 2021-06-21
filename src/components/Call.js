@@ -1,5 +1,10 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
+// import styled from 'styled-components';
+
+// const CallStyle = styled.div`
+
+// `;
 
 const Call = props => {
   const data = useStaticQuery(graphql`
