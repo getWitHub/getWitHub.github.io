@@ -2,12 +2,12 @@ const guid = process.env.NETLIFY_GOOGLE_ANALYTICS_ID;
 
 module.exports = {
   siteMetadata: {
-    title: 'WitHub',
-    description: 'Highlight the web',
+    title: 'WitHub - Highlight the Web',
+    description: 'Highlight & doodle over anything interesting you find on the web.',
     pathPrefix: '/getWitHub',
-    keywords:'withub , highlight, notes, productivity, knowledge , productivity tools',
+    keywords:'withub , highlight, notes, make notes online ,productivity, knowledge , productivity tools, make notes on websites',
     author: '@getwithub',
-    image: '/images/twitter-card.png'
+    image: 'https://www.getwithub.com/images/twitter-card.png'
   },
   plugins: [
     'gatsby-plugin-sass',

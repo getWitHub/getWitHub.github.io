@@ -15,7 +15,9 @@ const Home = props => {
   return (
     <Layout bodyClass="page-home">
       <SEO title={site.title} />
-      <Helmet />
+      <Helmet>
+        <meta name="twitter:image" content="https://www.getwithub.com/images/twitter-card.png"></meta>
+      </Helmet>
 
       <div data-sal="slide-up" data-sal-duration="300" data-sal-easing="ease-in" className="intro">
         <div className="container">

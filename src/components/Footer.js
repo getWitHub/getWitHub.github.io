@@ -13,6 +13,14 @@ const Footer = props => {
           }
         }
       }
+      configJson {
+        logo {
+          alt
+          desktop
+          mobile
+          desktop_height
+        }
+      }
       site {
         siteMetadata {
           title
@@ -26,7 +34,7 @@ const Footer = props => {
         <div className="row">
           <div className="col-12">
             <div className="footer-inner">
-              <h3 className="footer-title">{data.site.siteMetadata.title}</h3>
+              <img height={data.configJson.logo.desktop_height} alt={data.configJson.logo.alt} src={data.configJson.logo.desktop} />
               <ul>
                 {data.allFooterMenuJson.edges.map(({ node }) => (
                   <li key={node.name}>

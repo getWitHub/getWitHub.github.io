@@ -1,7 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import PropTypes from 'prop-types';
-// import { useLocation } from '@reach/router';
 import { useStaticQuery, graphql } from 'gatsby';
 
 function SEO({ description, lang, meta, title}) {
