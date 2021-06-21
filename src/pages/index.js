@@ -16,7 +16,9 @@ const Home = props => {
     <Layout bodyClass="page-home">
       <SEO title={site.title} />
       <Helmet>
+        <meta name="title" content="WitHub-Highlight the Web" />
         <meta name="twitter:image" content="https://www.getwithub.com/images/twitter-card.png"></meta>
+        <meta name="google-site-verification" content="o3HIEwGXZYyzUc78j6msWtj3TnGWNJIFlra-sliw5kk" />
       </Helmet>
 
       <div data-sal="slide-up" data-sal-duration="300" data-sal-easing="ease-in" className="intro">
