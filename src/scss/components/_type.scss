@@ -1,9 +1,12 @@
+$font-family-base: Helvetica, Arial, sans-serif, -apple-system;
+$font-family-heading: 'Playfair Display', serif, -apple-system;
+
 a {
   color: $primary;
 }
 p {
   line-height: 26px;
-  color: $steel;
+  color: #5C5A5A;
   font-family: $font-family-base;
   margin-bottom: 20px;
 }

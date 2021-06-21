@@ -24,7 +24,7 @@
   .call-box-bottom {
     flex: auto;
     padding: 20px;
-    border-top: 1px solid darken($white-offset, 5%);
+    border-top: 1px solid darken(#f6f7ff, 5%);
     @include media-breakpoint-up(sm) {
       flex: 0 0 auto;
       border: none;
@@ -41,7 +41,7 @@
     font-weight: bold;
   }
   svg {
-    fill: lighten($secondary, 40%);
+    fill: lighten(#ffe55f, 40%);
     position: absolute;
     bottom: -9px;
     right: 0;

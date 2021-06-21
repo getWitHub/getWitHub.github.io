@@ -6,7 +6,7 @@
   background-color: white;
 }
 .strip-grey {
-  background-color: $white-offset;
+  background-color: #f6f7ff;
 }
 .strip-diagonal {
   transform: skewY(5deg);
@@ -17,16 +17,16 @@
   }
 }
 .strip-primary-gradient {
-  background-image: linear-gradient(to right, $primary, $secondary);
+  background-image: linear-gradient(to right, #4460D9, #ffe55f);
 }
 .strip-primary-gradient-top-bottom {
-  background-image: linear-gradient(to bottom, $primary, $secondary);
+  background-image: linear-gradient(to bottom, #4460D9,#ffe55f);
 }
 .strip-primary {
-  background-color: $primary;
+  background-color: #4460D9;
 }
 .strip-secondary {
-  background-color: $secondary;
+  background-color: #ffe55f;
 }
 
 .strip-diagonal-right {

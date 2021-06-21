@@ -1,5 +1,7 @@
+$font-family-heading: 'Playfair Display', serif, -apple-system;
+
 .footer {
-  background: $footer-background-color;
+  background: #4460D9;
   padding-top: 15px;
   padding-bottom: 15px;
   .footer-inner {
@@ -28,10 +30,10 @@
     margin: 0;
     padding: 0;
     li {
-      color: $footer-text-color;
+      color:#ffffff;
       font-size: 1rem;
       a {
-        color: $footer-text-color;
+        color:#ffffff;
         text-decoration: none;
         padding: 12px 14px 12px 0;
         display: block;

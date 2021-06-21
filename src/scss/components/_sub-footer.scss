@@ -1,3 +1,6 @@
+$sub-footer-background-color: darken($primary, 10%);
+$sub-footer-text-color: $white;
+
 .sub-footer {
   background: $sub-footer-background-color;
   color: $sub-footer-text-color;
