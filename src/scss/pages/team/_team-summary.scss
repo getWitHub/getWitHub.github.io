@@ -26,6 +26,13 @@
       font-size: 12px;
       font-weight: 500;
     }
+    a {
+      padding: 10px;
+      display: inline-block;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
   }
   .team-content {
     margin-top: 20px;

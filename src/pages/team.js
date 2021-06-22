@@ -1,8 +1,9 @@
 import React from 'react';
 import { graphql } from 'gatsby';
+import { Helmet } from 'react-helmet';
+
 import SEO from '../components/SEO';
 import Layout from '../components/Layout';
-import Call from '../components/Call';
 
 const Team = props => {
   const team = props.data.team.edges;
@@ -12,7 +13,11 @@ const Team = props => {
   return (
     <Layout bodyClass="page-teams">
       <SEO title="Team" />
-
+      <Helmet>
+        <meta name="title" content="WitHub-Highlight the Web" />
+        <meta name="twitter:image" content="https://www.getwithub.com/images/twitter-card.png"></meta>
+        <meta name="google-site-verification" content="o3HIEwGXZYyzUc78j6msWtj3TnGWNJIFlra-sliw5kk" />
+      </Helmet>
       <div className="intro">
         <div className="container">
           <div className="row justify-content-start">
@@ -41,9 +46,12 @@ const Team = props => {
                 <div className="team-meta">
                   <h2 className="team-name">{node.frontmatter.title}</h2>
                   <p className="team-description">{node.frontmatter.jobtitle}</p>
-                  {node.frontmatter.linkedin && (
-                    <a target="_blank" href="{{ .Params.Linkedinurl }}">LinkedIn</a>
+                  {node.frontmatter.linkedinurl && (
+                    <a key={node.id} href={node.frontmatter.linkedinurl}>LinkedIn</a>
                   )}
+                  {node.frontmatter.twitterurl && (
+                    <a className="team-twitter" key={node.id} href={node.frontmatter.twitterurl}>Twitter</a>
+                  )}                  
                 </div>
                 <div className="team-content">
                   <p>{node.excerpt}</p>
@@ -64,8 +72,11 @@ const Team = props => {
                 <div className="team-meta">
                   <h2 className="team-name">{node.frontmatter.title}</h2>
                   <p className="team-description">{node.frontmatter.jobtitle}</p>
-                  {node.frontmatter.linkedin && (
-                    <a target="_blank" href="{{ .Params.Linkedinurl }}">LinkedIn</a>
+                  {node.frontmatter.linkedinurl && (
+                    <a className="team-linkedin" key={node.id} href={node.frontmatter.linkedinurl}>LinkedIn</a>
+                  )}
+                  {node.frontmatter.twitterurl && (
+                    <a className="team-twitter" key={node.id} href={node.frontmatter.twitterurl}>Twitter</a>
                   )}
                 </div>
               </div>
@@ -97,6 +108,7 @@ export const query = graphql`
             image
             jobtitle
             linkedinurl
+            twitterurl
           }
         }
       }
