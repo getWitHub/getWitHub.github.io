@@ -31,7 +31,7 @@ module.exports = {
         // Include GTM in development.
         //
         // Defaults to false meaning GTM will only be loaded in production.
-        includeInDevelopment: true,
+        includeInDevelopment: false,
   
         // datalayer to be set before GTM is loaded
         // should be an object or a function that is executed in the browser
@@ -65,14 +65,14 @@ module.exports = {
         name: 'data'
       }
     },
-    {
-      resolve: 'gatsby-plugin-google-analytics',
-      options: {
-        trackingId: guid || 'UA-199914501-1',
-        // Puts tracking script in the head instead of the body
-        head: false
-      }
-    },
+    // {
+    //   resolve: 'gatsby-plugin-google-analytics',
+    //   options: {
+    //     trackingId: guid || 'UA-199914501-1',
+    //     // Puts tracking script in the head instead of the body
+    //     head: true
+    //   }
+    // },
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
