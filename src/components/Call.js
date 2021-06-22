@@ -2,7 +2,8 @@ import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import styled from 'styled-components';
 
-const ButtonStyle = styled.button`
+// must be 'a' tag, gatsby external linking shit otherwise onclick dosent work
+const ButtonStyle = styled.a`
 white-space: nowrap;
 display: inline-block;
 height: 40px;
@@ -26,7 +27,6 @@ transition: all 0.15s ease;
 }
 `;
 
-
 const Call = props => {
   const data = useStaticQuery(graphql`
     query ContactQuery {
@@ -39,7 +39,7 @@ const Call = props => {
     <div className="call">
       {props.showButton && (
         <div className="call-box-bottom">
-          <ButtonStyle href={data.contactJson.contact_button_link}>Reserve Your Invite</ButtonStyle>
+          <ButtonStyle className="cta1" href={data.contactJson.contact_button_link}>Reserve Your Invite</ButtonStyle>
         </div>
       )}
     </div>
