@@ -5,6 +5,7 @@ import SEO from '../components/SEO';
 import Layout from '../components/Layout';
 import Call from '../components/Call';
 
+
 const Home = props => {
   const intro = props.data.intro;
   const site = props.data.site.siteMetadata;
@@ -81,6 +82,7 @@ const Home = props => {
           </div>
         </div>
       )}
+
     </Layout>
   );
 };
