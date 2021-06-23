@@ -2,11 +2,11 @@
 import React from 'react';
 import styled from 'styled-components';
 import Layout from '../components/Layout';
-import Helmet from 'react-helmet';
+import { Helmet } from 'react-helmet';
 
 
 const StyledWaitlist = styled.div`
-    padding-top: 30vh;
+    padding-top: 25vh;
     align-self: center;
     h1 {
       color: #eeeeee;
@@ -28,8 +28,7 @@ const StyledWaitlist = styled.div`
 const Register = props => {
 
   return (
-    // <Layout class="waitlist">
-    <div>
+    <Layout class="waitlist">
         <Helmet>
         <meta name="title" content="WitHub-Highlight the Web" />
         <meta name="twitter:image" content="https://www.getwithub.com/images/twitter-card.png"></meta>
@@ -39,15 +38,16 @@ const Register = props => {
           id="Waitlist-API-Script" 
           data-config="{
             'name': 'w1', 
-            'api_key': '{80KO4S}', 
-            'waitlist_link': '{https://www.getwithub.com/register}',
+            'api_key': '80KO4S', 
+            'waitlist_link': 'https://www.getwithub.com/register',
             'config': {'targetElementId': 'root'}
           }"
-      ></script>
+        ></script>
       </Helmet>
-        <StyledWaitlist id="root"></StyledWaitlist>
-    {/* </Layout> */}
-    </div>
+      <div>
+        <StyledWaitlist id='root'></StyledWaitlist>
+        </div>
+    </Layout>
   );
 };
 export default Register;
