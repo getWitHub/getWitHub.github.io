@@ -39,7 +39,7 @@ const Register = props => {
           data-config="{
             'name': 'w1', 
             'api_key': '80KO4S', 
-            'waitlist_link': 'https://getwithub.com/register',
+            'waitlist_link': 'https://www.getwithub.com/register',
             'config': {'targetElementId': 'root'}
           }"
         ></script>
