@@ -6,8 +6,10 @@ import Helmet from 'react-helmet';
 
 
 const StyledWaitlist = styled.div`
+    padding-top: 30vh;
+    align-self: center;
     h1 {
-        color: #eeeeee;
+      color: #eeeeee;
     }
     .container--waitlistapi {
       margin: 0 auto; // centers the widget
@@ -26,24 +28,26 @@ const StyledWaitlist = styled.div`
 const Register = props => {
 
   return (
-    <Layout class="waitlist">
+    // <Layout class="waitlist">
+    <div>
         <Helmet>
         <meta name="title" content="WitHub-Highlight the Web" />
         <meta name="twitter:image" content="https://www.getwithub.com/images/twitter-card.png"></meta>
         <meta name="google-site-verification" content="o3HIEwGXZYyzUc78j6msWtj3TnGWNJIFlra-sliw5kk" />
         <script 
-        src="https://unpkg.com/waitlistapi/dist/widget.js" 
-        id="Waitlist-API-Script" 
-        data-config="{
-          'name': 'w1', 
-          'api_key': '{80KO4S}', 
-          'waitlist_link': '{http://localhost:8000/register}',
-          'config': {'targetElementId': 'root'}
-        }"
+          src="https://unpkg.com/waitlistapi/dist/widget.js" 
+          id="Waitlist-API-Script" 
+          data-config="{
+            'name': 'w1', 
+            'api_key': '{80KO4S}', 
+            'waitlist_link': '{https://www.getwithub.com/register}',
+            'config': {'targetElementId': 'root'}
+          }"
       ></script>
       </Helmet>
         <StyledWaitlist id="root"></StyledWaitlist>
-    </Layout>
+    {/* </Layout> */}
+    </div>
   );
 };
 export default Register;
