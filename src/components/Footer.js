@@ -38,7 +38,7 @@ const Footer = props => {
               <ul>
                 {data.allFooterMenuJson.edges.map(({ node }) => (
                   <li key={node.name}>
-                    <a className="cta3" href='https://www.getwithub.com/register'>{node.name}</a>
+                    <a className="cta3" href='/register'>{node.name}</a>
                   </li>
                 ))}
               </ul>

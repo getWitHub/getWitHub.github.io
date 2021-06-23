@@ -20,7 +20,7 @@ const Menu = props => {
       <ul>
         {data.allMainMenuJson.edges.map(({ node }) => (
           <li key={node.name}>
-            <a className="cta2" href='https://www.getwithub.com/register' activeClassName="active">{node.name}</a>
+            <a className="cta2" href='/register' activeClassName="active">{node.name}</a>
           </li>
         ))}
       </ul>
