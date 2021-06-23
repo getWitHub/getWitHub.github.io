@@ -39,7 +39,7 @@ const Call = props => {
     <div className="call">
       {props.showButton && (
         <div className="call-box-bottom">
-          <ButtonStyle className="cta1" href='/register/'>Reserve Your Invite</ButtonStyle>
+          <ButtonStyle className="cta1" href='https://withub.typeform.com/to/iKeHTt56/'>Reserve Your Invite</ButtonStyle>
         </div>
       )}
     </div>
