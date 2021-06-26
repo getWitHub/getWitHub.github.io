@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet';
 import PropTypes from 'prop-types';
 import { useStaticQuery, graphql } from 'gatsby';
 
-function SEO({ description, lang, meta, title}) {
+function SEO({ description, lang, meta}) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -23,7 +23,6 @@ function SEO({ description, lang, meta, title}) {
   const keywords = site.siteMetadata.keywords;
   const metaDescription = description || site.siteMetadata.description;
   const defaultTitle = site.siteMetadata.title;
-
   return (
     <Helmet
       htmlAttributes={{
@@ -32,6 +31,10 @@ function SEO({ description, lang, meta, title}) {
       title={defaultTitle}
       titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
       meta={[
+        // {
+        //   name: `title`,
+        //   content: title
+        // },
         {
           name: `description`,
           content: metaDescription
@@ -42,7 +45,7 @@ function SEO({ description, lang, meta, title}) {
         },
         {
           property: `og:title`,
-          content: title
+          content: defaultTitle
         },
         {
           property: `og:description`,
@@ -70,7 +73,7 @@ function SEO({ description, lang, meta, title}) {
         },
         {
           name: `twitter:title`,
-          content: title
+          content: defaultTitle
         },
         {
           name: `twitter:description`,

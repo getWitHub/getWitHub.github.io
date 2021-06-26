@@ -1,6 +1,25 @@
 import React from 'react';
-import { graphql, useStaticQuery, Link } from 'gatsby';
+import { graphql, useStaticQuery} from 'gatsby';
+import styled from 'styled-components';
 
+const LinkStyle = styled.a`
+  padding: 10px 12px 10px 12px;
+  display: inline-block;
+  font-weight: normal;
+  text-decoration: none;
+  color: #4460D9;
+  &.hover {
+    text-decoration: underline;
+  }
+  &.active {
+    font-weight: bold;
+    text-decoration: none;
+    &:hover {
+      text-decoration: none;
+      transition: all 225ms ease-in 0s;
+    }
+  }
+`;
 const Menu = props => {
   const data = useStaticQuery(graphql`
     query MainMenuQuery {
@@ -15,17 +34,34 @@ const Menu = props => {
       }
     }
   `);
+  // remember to apply same changes in MenuMobile
+  const handleClick = () => {
+    if(window.location.href === 'https://www.getwithub.com/team/') {
+      window.location.href = 'https://withub.typeform.com/to/UGIXbK89?utm_source=xxxxx&utm_medium=xxxxx&utm_campaign=xxxxx&utm_term=xxxxx&utm_content=xxxxx'
+    }
+    else if(window.location.href === 'https://www.getwithub.com/') {
+      window.scroll({
+        top: document.body.offsetHeight,
+        left: 0, 
+        behavior: 'smooth',
+      }); 
+    }
+  }
   return (
     <div id="main-menu" className="main-menu">
       <ul>
         {data.allMainMenuJson.edges.map(({ node }) => (
           <li key={node.name}>
-            <a className={node.name} href={node.url} activeClassName="active">{node.name}</a>
+            <LinkStyle className={node.name} href={node.url}>{node.name}</LinkStyle>
           </li>
         ))}
+        <li>
+        <LinkStyle className="cta2" onClick={() => handleClick()}>Get Your Invite</LinkStyle>
+        </li>
       </ul>
     </div>
   );
 };
 
 export default Menu;
+
