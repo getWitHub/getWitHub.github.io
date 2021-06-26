@@ -1,5 +1,5 @@
 import React from 'react';
-import { graphql, useStaticQuery, Link } from 'gatsby';
+import { graphql, useStaticQuery} from 'gatsby';
 
 const Menu = props => {
   const data = useStaticQuery(graphql`
@@ -20,7 +20,7 @@ const Menu = props => {
       <ul>
         {data.allMainMenuJson.edges.map(({ node }) => (
           <li key={node.name}>
-            <a className={node.name} href={node.url} activeClassName="active">{node.name}</a>
+            <a className={node.name} href={node.url}>{node.name}</a>
           </li>
         ))}
       </ul>
