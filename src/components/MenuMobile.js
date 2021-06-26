@@ -28,10 +28,10 @@ const MobileMenu = props => {
     }
   `);
   const handleClick = () => {
-    if(window.location.href === 'https://www.getwithub.com/team/' ||'http://localhost:8000/team/') {
+    if(window.location.href === 'https://www.getwithub.com/team/') {
       window.location.href = 'https://withub.typeform.com/to/UGIXbK89?utm_source=xxxxx&utm_medium=xxxxx&utm_campaign=xxxxx&utm_term=xxxxx&utm_content=xxxxx'
     }
-    if(window.location.href === 'https://www.getwithub.com/' || 'http://localhost:8000/') {
+    if(window.location.href === 'https://www.getwithub.com/') {
       window.scroll({
         top: document.body.offsetHeight,
         left: 0, 
