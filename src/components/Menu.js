@@ -20,7 +20,6 @@ const LinkStyle = styled.a`
     }
   }
 `;
-
 const Menu = props => {
   const data = useStaticQuery(graphql`
     query MainMenuQuery {
@@ -36,11 +35,16 @@ const Menu = props => {
     }
   `);
   const handleClick = () => {
-    window.scroll({
-      top: document.body.offsetHeight,
-      left: 0, 
-      behavior: 'smooth',
-    }); 
+    if(window.location.href === 'https://www.getwithub.com/team/') {
+      window.location.href = 'https://withub.typeform.com/to/UGIXbK89'
+    }
+    if(window.location.href === 'https://www.getwithub.com/') {
+      window.scroll({
+        top: document.body.offsetHeight,
+        left: 0, 
+        behavior: 'smooth',
+      }); 
+    }
   }
   return (
     <div id="main-menu" className="main-menu">
