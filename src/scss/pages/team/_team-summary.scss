@@ -2,6 +2,8 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
+  max-height: 100px;
+  max-width: 350px;
   .team-image {
     height: 60px;
     width: 60px;
@@ -21,7 +23,7 @@
     }
     p {
       color: #2f2f41;
-      text-transform: uppercase;
+      text-transform: capitalize;
       margin: 0;
       font-size: 12px;
       font-weight: 500;
@@ -44,6 +46,8 @@
   background-color: #f6f7ff;
   padding: 30px;
   border-radius: 3px;
+  max-height: 150px;
+  max-width: 350px;
   .team-image {
     height: 90px;
     width: 90px;

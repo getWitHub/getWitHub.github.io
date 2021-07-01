@@ -47,7 +47,7 @@ const Home = props => {
                     <div className="service-content">
                       <h2 className="service-title">{node.frontmatter.title}
                       </h2>
-                      <p>{node.excerpt}</p>
+                      <p style={{background: node.excerpt === "Highlight and annotate directly on webpages" ? '#000fff' : 'transparent'}}>{node.excerpt}</p>
                     </div>
                   </div>
                 </div>
@@ -81,7 +81,9 @@ const Home = props => {
           </div>
         </div>
       )}
-      <div class="typeform-widget" data-url="https://form.typeform.com/to/UGIXbK89?utm_source=website&utm_medium=typeform&utm_campaign=signup&utm_term=xxxxx&utm_content=emailID&typeform-medium=embed-snippet" style={{width: '100%' , height: '500px'}}></div> <script>{(function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm", b="https://embed.typeform.com/"; if(!gi.call(d,id)) { js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })()}</script>
+      <div className='typeform'>
+        <div class="typeform-widget"> <iframe src="https://form.typeform.com/to/UGIXbK89?typeform-embed-id=20874773292615512&amp;typeform-embed=embed-widget&amp;typeform-source=getwithub.com&amp;typeform-medium=embed-sdk&amp;typeform-medium-version=next" data-testid="iframe" style={{width: '100%' , height: '50vh'}}> </iframe> </div>
+      </div>
     </Layout>
   );
 };

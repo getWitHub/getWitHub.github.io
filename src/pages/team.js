@@ -4,7 +4,8 @@ import { Helmet } from 'react-helmet';
 
 import SEO from '../components/SEO';
 import Layout from '../components/Layout';
-
+import Twitter from '../components/TwitterIcon';
+import Linkedin from '../components/LinkedinIcon';
 const Team = props => {
   const team = props.data.team.edges;
   const { intro } = props.data;
@@ -47,10 +48,14 @@ const Team = props => {
                   <h2 className="team-name">{node.frontmatter.title}</h2>
                   <p className="team-description">{node.frontmatter.jobtitle}</p>
                   {node.frontmatter.linkedinurl && (
-                    <a key={node.id} href={node.frontmatter.linkedinurl}>LinkedIn</a>
+                    <a key={node.id} href={node.frontmatter.linkedinurl}>
+                      <Linkedin />
+                    </a>
                   )}
                   {node.frontmatter.twitterurl && (
-                    <a className="team-twitter" key={node.id} href={node.frontmatter.twitterurl}>Twitter</a>
+                    <a className="team-twitter" key={node.id} href={node.frontmatter.twitterurl}>
+                      <Twitter />
+                    </a>
                   )}                  
                 </div>
                 <div className="team-content">
