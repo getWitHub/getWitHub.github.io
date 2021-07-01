@@ -47,7 +47,7 @@ const Home = props => {
                     <div className="service-content">
                       <h2 className="service-title">{node.frontmatter.title}
                       </h2>
-                      <p style={{background: node.excerpt === "Highlight and annotate directly on webpages" ? '#000fff' : 'transparent'}}>{node.excerpt}</p>
+                      <p style={{background: node.excerpt === 'Highlight and annotate directly on webpages.' ? '#B3D6F5' : 'transparent'}}>{node.excerpt}</p>
                     </div>
                   </div>
                 </div>
