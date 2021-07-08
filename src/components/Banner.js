@@ -4,12 +4,12 @@ import styled from 'styled-components';
 
 const BannerStyle = styled.div`
 background: #5271FF;
-width: 100%
-height: 3rem;
+width: 100%;
+height: 7.5vh;
 margin-top: 0rem;
 font-size: 1.1rem;
 text-align: center;
-padding-top: 0.4rem;
+padding-top: 0.3rem;
 `;
 
 const TextStyle = styled.p`
