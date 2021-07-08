@@ -1,5 +1,11 @@
 [
     {
+        "name": "Home",
+        "url": "/",
+        "weight": 1,
+        "className": "home"
+    },
+    {
         "name": "About",
         "url": "/team/",
         "weight": 1,

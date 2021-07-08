@@ -20,7 +20,7 @@ text-align: center;
 const Banner = () => {
     return(
         <BannerStyle className="banner">
-            <TextStyle className="bannerText">New slots are opened in batches everyday. SignUp to access with the next batch</TextStyle>
+            <TextStyle className="bannerText">Fresh invites are released in batches <span style={{fontWeight: 'bolder'}}>everyday</span>. Sign up to reserve your invite and <span><a className="cta0"style={{fontWeight: 'bolder',color:'#ffffff'}} href="https://withub.typeform.com/to/dOTkG3oa">get started with WitHub</a>.</span></TextStyle>
         </BannerStyle>
     )
 }
