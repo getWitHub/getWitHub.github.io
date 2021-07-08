@@ -22,27 +22,20 @@ const MobileMenu = props => {
             name
             url
             weight
+            className
           }
         }
       }
     }
   `);
-  const handleClick = () => {
-
-    window.location.href = 'https://withub.typeform.com/to/UGIXbK89?utm_source=xxxxx&utm_medium=xxxxx&utm_campaign=xxxxx&utm_term=xxxxx&utm_content=xxxxx'
-
-  }
   return (
     <div id="main-menu-mobile" className={`main-menu-mobile ${props.active ? 'open' : ''}`}>
       <ul>
         {data.allMainMenuJson.edges.map(({ node }) => (
-          <li key={node.name}>
-          <LinkStyle className={node.name} href={node.url}>{node.name}</LinkStyle>
+          <li className={node.className}key={node.name}>
+          <LinkStyle href={node.url}>{node.name}</LinkStyle>
         </li>
       ))}
-      <li>
-      <LinkStyle className="cta2" onClick={() => handleClick()}>Get Your Invite</LinkStyle>
-      </li>
       </ul>
     </div>
   );

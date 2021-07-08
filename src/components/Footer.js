@@ -10,6 +10,7 @@ const Footer = props => {
             weight
             url
             name
+            className
           }
         }
       }
@@ -37,8 +38,8 @@ const Footer = props => {
               <img height={data.configJson.logo.desktop_height} alt={data.configJson.logo.alt} src={data.configJson.logo.desktop} />
               <ul>
                 {data.allFooterMenuJson.edges.map(({ node }) => (
-                  <li key={node.name}>
-                    <a className={node.name} href={node.url}>{node.name}</a>
+                  <li className={node.className}key={node.name}>
+                    <a href={node.url}>{node.name}</a>
                   </li>
                 ))}
               </ul>

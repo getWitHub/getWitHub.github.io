@@ -81,9 +81,6 @@ const Home = props => {
           </div>
         </div>
       )}
-      <div className='typeform'>
-        <div class="typeform-widget"> <iframe src="https://form.typeform.com/to/UGIXbK89?typeform-embed-id=20874773292615512&amp;typeform-embed=embed-widget&amp;typeform-source=getwithub.com&amp;typeform-medium=embed-sdk&amp;typeform-medium-version=next" data-testid="iframe" style={{width: '100%' , height: '50vh'}}> </iframe> </div>
-      </div>
     </Layout>
   );
 };

@@ -29,35 +29,21 @@ const Menu = props => {
             name
             url
             weight
+            className
           }
         }
       }
     }
   `);
   // remember to apply same changes in MenuMobile
-  const handleClick = () => {
-    if(window.location.href === 'https://www.getwithub.com/team/') {
-      window.location.href = 'https://withub.typeform.com/to/UGIXbK89?utm_source=xxxxx&utm_medium=xxxxx&utm_campaign=xxxxx&utm_term=xxxxx&utm_content=xxxxx'
-    }
-    else if(window.location.href === 'https://www.getwithub.com/') {
-      window.scroll({
-        top: document.body.offsetHeight,
-        left: 0, 
-        behavior: 'smooth',
-      }); 
-    }
-  }
   return (
     <div id="main-menu" className="main-menu">
       <ul>
         {data.allMainMenuJson.edges.map(({ node }) => (
-          <li key={node.name}>
-            <LinkStyle className={node.name} href={node.url}>{node.name}</LinkStyle>
+          <li className={node.className}key={node.name}>
+            <LinkStyle href={node.url}>{node.name}</LinkStyle>
           </li>
         ))}
-        <li>
-        <LinkStyle className="cta2" onClick={() => handleClick()}>Get Your Invite</LinkStyle>
-        </li>
       </ul>
     </div>
   );

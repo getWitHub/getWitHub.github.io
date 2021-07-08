@@ -3,7 +3,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 import styled from 'styled-components';
 
 // must be 'a' tag, gatsby external linking shit otherwise onclick dosent work
-const ButtonStyle = styled.button`
+const ButtonStyle = styled.a`
 white-space: nowrap;
 display: inline-block;
 height: 40px;
@@ -35,18 +35,11 @@ const Call = props => {
         }
     }
    `);
-  const handleClick =() => {
-    window.scroll({
-      top: document.body.offsetHeight,
-      left: 0, 
-      behavior: 'smooth',
-    });
-  }
   return (
     <div className="call">
       {props.showButton && (
         <div className="call-box-bottom">
-          <ButtonStyle className="cta1" onClick={() => handleClick()} >Reserve Your Invite</ButtonStyle>
+          <ButtonStyle className="cta1" href="https://withub.typeform.com/to/dOTkG3oa" >Reserve Your Invite</ButtonStyle>
         </div>
       )}
     </div>
