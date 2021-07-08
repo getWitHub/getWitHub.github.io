@@ -3,17 +3,18 @@ import styled from 'styled-components';
 
 
 const BannerStyle = styled.div`
+display: flex;
+justify-content: center;
+align-items: center;
 background: #5271FF;
 width: 100%;
-height: 7.5vh;
-margin-top: 0rem;
+height: 5vh;
 font-size: 1.1rem;
-text-align: center;
-padding-top: 0.3rem;
+color: #ffffff
 `;
 
-const TextStyle = styled.p`
-color: #ffffff
+const TextStyle = styled.div`
+text-align: center;
 `;
 
 const Banner = () => {
