@@ -10,7 +10,7 @@ align-items: center;
 background: #5271FF;
 width: 100%;
 height: auto;
-font-size: 105%;
+font-size: 1.2rem;
 color: #ffffff;
 padding-left: 2px;
 padding-right: 2px;

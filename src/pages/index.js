@@ -10,12 +10,6 @@ const Home = (props) => {
   const site = props.data.site.siteMetadata;
   const services = props.data.services.edges;
   const features = props.data.features.edges;
-  const introImageClasses = `intro-image ${
-    intro.frontmatter.intro_image_absolute && "intro-image-absolute"
-  } ${
-    intro.frontmatter.intro_image_hide_on_mobile && "intro-image-hide-mobile"
-  }`;
-
   return (
     <Layout bodyClass="page-home">
       <SEO title={site.title} />

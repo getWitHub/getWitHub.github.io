@@ -11,7 +11,7 @@ line-height: 40px;
 padding: 0 14px;
 background: #4460D9;
 border-radius: 4px;
-font-size: 14px;
+font-size: 0.875rem;
 font-weight: normal;
 text-transform: uppercase;
 letter-spacing: 0.025em;

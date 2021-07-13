@@ -5,8 +5,7 @@ intro_image_absolute: true
 intro_image_hide_on_mobile: true
 ---
 
-# Having trouble finding your notes on time?
+# Having a hard time searching for your notes?
 
-Check your google drive, or maybe that dropbox account you created last month. What about your bookmarks, did you check them?
-
-## ... Still searching?
+or repeating the copy+paste ritual everytime you want to save something?
+## Need a better way?

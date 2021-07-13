@@ -3,18 +3,25 @@ import GIF from "../../static/gifs/test.gif";
 import styled from "styled-components";
 
 const Container = styled.div`
-  width: 45vw;
+  width: 35vw;
+  height: auto;
   white-space: nowrap;
-  height: 40px;
+  max-height: 40px;
   line-height: 40px;
-  border-radius: 4px;
-  padding-left: 25vw;
   
+  border-radius: 7px;
+  padding-left: 26vw;
+  position: absolute;
+  box-sizing: border-box;
+  break-before: auto;
   img{
-    width: 37vw;
+    width: inherit;
     height: auto;
     border-radius: 5px;
-
+    &:hover {
+      box-shadow: 2.5px 2.5px 2px #888888;
+      border-radius: 14px;
+    }
   }
 `;
 
