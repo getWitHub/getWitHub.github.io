@@ -1,39 +1,49 @@
-import React from 'react';
-import { graphql } from 'gatsby';
-import Helmet from 'react-helmet';
-import SEO from '../components/SEO';
-import Layout from '../components/Layout';
-import Call from '../components/Call';
-import Giffy from '../components/Gif';
-const Home = props => {
+import React from "react";
+import { graphql } from "gatsby";
+import Helmet from "react-helmet";
+import SEO from "../components/SEO";
+import Layout from "../components/Layout";
+import Call from "../components/Call";
+import Giffy from "../components/Gif";
+const Home = (props) => {
   const intro = props.data.intro;
   const site = props.data.site.siteMetadata;
   const services = props.data.services.edges;
   const features = props.data.features.edges;
-  const introImageClasses = `intro-image ${intro.frontmatter.intro_image_absolute && 'intro-image-absolute'} ${intro.frontmatter.intro_image_hide_on_mobile && 'intro-image-hide-mobile'}`;
+  const introImageClasses = `intro-image ${
+    intro.frontmatter.intro_image_absolute && "intro-image-absolute"
+  } ${
+    intro.frontmatter.intro_image_hide_on_mobile && "intro-image-hide-mobile"
+  }`;
 
   return (
     <Layout bodyClass="page-home">
       <SEO title={site.title} />
       <Helmet>
         <meta name="title" content="WitHub-Highlight the Web" />
-        <meta name="twitter:image" content="https://www.getwithub.com/images/twitter-card.png"></meta>
-        <meta name="google-site-verification" content="o3HIEwGXZYyzUc78j6msWtj3TnGWNJIFlra-sliw5kk" />
+        <meta
+          name="twitter:image"
+          content="https://www.getwithub.com/images/twitter-card.png"
+        ></meta>
+        <meta
+          name="google-site-verification"
+          content="o3HIEwGXZYyzUc78j6msWtj3TnGWNJIFlra-sliw5kk"
+        />
       </Helmet>
 
-      <div data-sal="slide-up" data-sal-duration="300" data-sal-easing="ease-in" className="intro">
+      <div
+        data-sal="slide-up"
+        data-sal-duration="300"
+        data-sal-easing="ease-in"
+        className="intro"
+      >
         <div className="container">
           <div className="row justify-content-start">
             <div className="col-12 col-md-7 col-lg-6 order-2 order-md-1">
+            <Giffy />
               <div dangerouslySetInnerHTML={{ __html: intro.html }} />
               <Call showButton />
             </div>
-            {/* {intro.frontmatter.intro_image && (
-              <div className="col-12 col-md-5 col-lg-6 order-1 order-md-2 position-relative">
-                <img alt={intro.frontmatter.title} className={introImageClasses} src={intro.frontmatter.intro_image} />
-              </div>
-            )} */}
-          <Giffy />
           </div>
         </div>
       </div>
@@ -44,19 +54,34 @@ const Home = props => {
             <div className="row justify-content-start">
               {services.map(({ node }) => (
                 <div key={node.id} className="col-12 col-md-4 mb-1">
-                  <div data-sal="slide-up" data-sal-duration="300" data-sal-delay="300" data-sal-easing="ease-in" className="service service-summary">
+                  <div
+                    data-sal="slide-up"
+                    data-sal-duration="300"
+                    data-sal-delay="300"
+                    data-sal-easing="ease-in"
+                    className="service service-summary"
+                  >
                     <div className="service-content">
-                      <h2 className="service-title">{node.frontmatter.title}
+                      <h2 className="service-title">
+                        {node.frontmatter.title}
                       </h2>
-                      <p style={{background: node.excerpt === 'Highlight and annotate directly on webpages.' ? '#B3D6F5' : 'transparent'}}>{node.excerpt}</p>
+                      <p
+                        style={{
+                          background:
+                            node.excerpt ===
+                            "Highlight and annotate directly on webpages."
+                              ? "#B3D6F5"
+                              : "transparent",
+                        }}
+                      >
+                        {node.excerpt}
+                      </p>
                     </div>
                   </div>
                 </div>
               ))}
             </div>
-            <div className="row justify-content-center">
-
-            </div>
+            <div className="row justify-content-center"></div>
           </div>
         </div>
       )}
@@ -67,7 +92,12 @@ const Home = props => {
             <div className="row justify-content-center">
               {features.map(({ node }) => (
                 <div key={node.id} className="col-12 col-md-6 col-lg-4 mb-2">
-                  <div data-sal="slide-up" data-sal-duration="500" className="feature" data-sal-easing="ease-out">
+                  <div
+                    data-sal="slide-up"
+                    data-sal-duration="500"
+                    className="feature"
+                    data-sal-easing="ease-out"
+                  >
                     {node.image && (
                       <div className="feature-image">
                         <img src={node.image} />
@@ -89,7 +119,7 @@ const Home = props => {
 export const query = graphql`
   query {
     services: allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/services\/.*/" } }
+      filter: { fileAbsolutePath: { regex: "/services/.*/" } }
       sort: { fields: [frontmatter___weight], order: ASC }
       limit: 6
     ) {
@@ -107,17 +137,15 @@ export const query = graphql`
         }
       }
     }
-    intro: markdownRemark(
-      fileAbsolutePath: {regex: "/content/index.md/"}
-    ) {
-        html
-        frontmatter {
-          image
-          intro_image
-          intro_image_absolute
-          intro_image_hide_on_mobile
-          title
-        }
+    intro: markdownRemark(fileAbsolutePath: { regex: "/content/index.md/" }) {
+      html
+      frontmatter {
+        image
+        intro_image
+        intro_image_absolute
+        intro_image_hide_on_mobile
+        title
+      }
     }
     features: allFeaturesJson {
       edges {
