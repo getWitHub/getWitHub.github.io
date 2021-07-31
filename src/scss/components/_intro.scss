@@ -4,24 +4,37 @@ $font-family-base: Helvetica, Arial, sans-serif, -apple-system;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-top: 27vh;
   overflow: hidden;
-  @include media-breakpoint-up(md) {
+  
+  @include media-breakpoint-up(xl) {
     padding-top: 140px;
     padding-bottom: 140px;
   }
+  @media (max-width: 1200px) and (min-width: 600px) {
+    padding-top: 42vh;
+    padding-left: 14vw;
+  }
+  @media (max-width: 600px) and (min-width: 375px) {
+    padding-top: 45vh;
+  }
+  @media (max-width: 375px) and (min-width: 260px) {
+    padding-top: 45vh;
+  }
   h1 {
+    width: 90%;
     color: #2f2f41;
     font-size: 42px;
     font-weight: bold;
     line-height: 1.2;
     @include media-breakpoint-up(md) {
-      width: 80%;
-      font-size: 48px;
+      width: 160%;
+      font-size: 42px;
     }
-    @include media-breakpoint-up(lg) {
-      font-size: 50px;
+    @include media-breakpoint-up(xl) {
+      width: 100%;
+      left: 15vw;
+      font-size: 42px;
     }
   }
   h2 {
@@ -31,13 +44,14 @@ $font-family-base: Helvetica, Arial, sans-serif, -apple-system;
     margin-bottom: 30px;
     color: #2f2f41;
     font-family: $font-family-base;
+    
   }
   p {
     font-size: 1.2rem;
     font-weight: light;
     line-height: 1.5;
     color: #5C5A5A;
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(xl) {
       width: 80%;
     }
   }

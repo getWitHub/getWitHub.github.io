@@ -29,6 +29,9 @@
       flex: 0 0 auto;
       border: none;
     }
+    @media (max-width:1200px){
+      padding-left: 20vw;
+    }
   }
   .call-name {
     font-size: 1.1rem;
