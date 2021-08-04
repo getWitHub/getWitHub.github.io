@@ -10,11 +10,5 @@
         "url": "/team/",
         "weight": 1,
         "className": "about"
-    },
-    {
-        "name": "Sign Up",
-        "url": "https://withub.typeform.com/to/dOTkG3oa",
-        "weight": 1,
-        "className": "cta3"
     }
 ]

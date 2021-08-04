@@ -5,23 +5,23 @@ const VideoStyle = styled.div`
   height: 42vh;
   width: 30vw;
   position: absolute;
-  top: 24vh;
+  top: 20vh;
   left: 53vw;
   @media (max-width: 1200px) and (min-width: 600px) {
     width: 70vw;
-    top: 12vh;
+    top: 10vh;
     left: 15vw;
     height: 35vh;
   }
-  @media (max-width: 600px) and (min-width: 375px){
+  @media (max-width: 600px) and (min-width: 350px){
     width: 80vw;
-    top: 22vh;
+    top: 17vh;
     left: 10vw;
     height: 35vh;
   }
-  @media (max-width: 375px) and (min-width: 260px){
+  @media (max-width: 350px) and (min-width: 260px){
     width: 80vw;
-    top: 25vh;
+    top: 17vh;
     left: 10vw;
   }
 `;

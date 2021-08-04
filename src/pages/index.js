@@ -5,6 +5,7 @@ import SEO from "../components/SEO";
 import Layout from "../components/Layout";
 import Call from "../components/Call";
 import DemoVideo from "../components/Demo";
+import TypeformLink from "../components/ExtensionLink";
 const Home = (props) => {
   const intro = props.data.intro;
   const site = props.data.site.siteMetadata;
@@ -15,7 +16,6 @@ const Home = (props) => {
   } ${
     intro.frontmatter.intro_image_hide_on_mobile && "intro-image-hide-mobile"
   }`;
-
   return (
     <Layout bodyClass="page-home">
       <SEO title={site.title} />

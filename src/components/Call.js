@@ -1,6 +1,7 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import styled from 'styled-components';
+import TypeformLink from './ExtensionLink';
 
 // must be 'a' tag, gatsby external linking shit otherwise onclick dosent work
 const ButtonStyle = styled.a`
@@ -39,7 +40,7 @@ const Call = props => {
     <div className="call">
       {props.showButton && (
         <div className="call-box-bottom">
-          <ButtonStyle className="cta1" href="https://withub.typeform.com/to/dOTkG3oa" >Reserve Your Invite</ButtonStyle>
+          <ButtonStyle className="cta1" href={TypeformLink()} >Get Started</ButtonStyle>
         </div>
       )}
     </div>

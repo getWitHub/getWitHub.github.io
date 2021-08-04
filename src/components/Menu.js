@@ -1,6 +1,7 @@
 import React from 'react';
 import { graphql, useStaticQuery} from 'gatsby';
 import styled from 'styled-components';
+import TypeformLink from './ExtensionLink';
 
 const LinkStyle = styled.a`
   padding: 10px 12px 10px 12px;
@@ -44,6 +45,9 @@ const Menu = props => {
             <LinkStyle href={node.url}>{node.name}</LinkStyle>
           </li>
         ))}
+          <li className="cta2" key="Sign Up">
+            <LinkStyle href={TypeformLink()}>Sign Up</LinkStyle>
+          </li>
       </ul>
     </div>
   );
