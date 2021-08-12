@@ -41,7 +41,7 @@ const Call = props => {
     <div className="call">
       {props.showButton && (
         <div className="call-box-bottom">
-          <ButtonStyle className="cta1" href={link} >Get Started</ButtonStyle>
+          <ButtonStyle className="cta1" href={link} >Get started, it's free</ButtonStyle>
         </div>
       )}
     </div>
