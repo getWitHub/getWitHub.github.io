@@ -28,7 +28,7 @@ transition: all 0.15s ease;
 }
 `;
 
-const Call = props => {
+const Call = () => {
   let link = TypeformLink()
   const data = useStaticQuery(graphql`
     query ContactQuery {
@@ -38,13 +38,7 @@ const Call = props => {
     }
    `);
   return (
-    <div className="call">
-      {props.showButton && (
-        <div className="call-box-bottom">
           <ButtonStyle className="cta1" href={link} >Get started, it's free</ButtonStyle>
-        </div>
-      )}
-    </div>
   );
 };
 

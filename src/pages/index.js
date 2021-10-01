@@ -28,7 +28,8 @@ const Home = (props) => {
           content="o3HIEwGXZYyzUc78j6msWtj3TnGWNJIFlra-sliw5kk"
         />
       </Helmet>
-      
+      {/* <DemoVideo /> */}
+      <Call />
     </Layout>
   );
 };
