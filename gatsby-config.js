@@ -2,7 +2,7 @@ const guid = process.env.NETLIFY_GOOGLE_ANALYTICS_ID;
 
 module.exports = {
   siteMetadata: {
-    title: 'WitHub - Highlight the Web',
+    title: 'WitHub - Your Personal Search',
     description: 'Highlight & doodle over anything interesting you find on the web.',
     pathPrefix: '/getWitHub',
     keywords:'withub , highlight, notes, make notes online ,productivity, knowledge , productivity tools, make notes on websites',
