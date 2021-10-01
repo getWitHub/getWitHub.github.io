@@ -3,5 +3,10 @@
         "name": "Twitter",
         "link": "https://twitter.com/getwithub",
         "image": "/images/social/twitter.svg"
+    },
+    {
+        "name": "Discord",
+        "link": "https://twitter.com/getwithub",
+        "image": "/images/social/twitter.svg"
     }
 ]

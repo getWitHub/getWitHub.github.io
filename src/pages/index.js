@@ -6,6 +6,10 @@ import Layout from "../components/Layout";
 import Call from "../components/Call";
 import DemoVideo from "../components/Demo";
 import TypeformLink from "../components/ExtensionLink";
+import LandingText from "../components/LandingText";
+import LandingSubText from "../components/LandingSubText";
+
+
 const Home = (props) => {
   const intro = props.data.intro;
   const site = props.data.site.siteMetadata;
@@ -27,9 +31,16 @@ const Home = (props) => {
           name="google-site-verification"
           content="o3HIEwGXZYyzUc78j6msWtj3TnGWNJIFlra-sliw5kk"
         />
-      </Helmet>
-      {/* <DemoVideo /> */}
+      </Helmet>.
+      <div style={{textAlign : 'center' }}>
+      <LandingText />
+      </div>
+      <div style={{textAlign : 'center' }}>
+      <LandingSubText />
+      </div>
+      <div style={{textAlign : 'center' }}>
       <Call />
+      </div>
     </Layout>
   );
 };

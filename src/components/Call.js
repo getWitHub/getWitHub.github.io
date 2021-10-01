@@ -5,11 +5,11 @@ import TypeformLink from './ExtensionLink';
 
 // must be 'a' tag, gatsby external linking shit otherwise onclick dosent work
 const ButtonStyle = styled.a`
+
 white-space: nowrap;
 display: inline-block;
-height: 40px;
+padding: 7px;
 line-height: 40px;
-padding: 0 14px;
 background: #4460D9;
 border-radius: 4px;
 font-size: 14px;
@@ -38,7 +38,7 @@ const Call = () => {
     }
    `);
   return (
-          <ButtonStyle className="cta1" href={link} >Get started, it's free</ButtonStyle>
+          <ButtonStyle className="cta1" href={link} >Join our Waitlist</ButtonStyle>
   );
 };
 
