@@ -8,6 +8,8 @@ import DemoVideo from "../components/Demo";
 import TypeformLink from "../components/ExtensionLink";
 import LandingText from "../components/LandingText";
 import LandingSubText from "../components/LandingSubText";
+import Background from './../../static/images/background.png';
+import TopBar from "../components/TopBar";
 
 
 const Home = (props) => {
@@ -19,7 +21,7 @@ const Home = (props) => {
   //   intro.frontmatter.intro_image_hide_on_mobile && "intro-image-hide-mobile"
   // }`;
   return (
-    <Layout bodyClass="page-home">
+    <div style={{width : '100%' , height : '100vh', backgroundImage:`url(${Background})`}}>
       <SEO title={site.title} />
       <Helmet>
         <meta name="title" content="WitHub-Highlight the Web" />
@@ -31,17 +33,18 @@ const Home = (props) => {
           name="google-site-verification"
           content="o3HIEwGXZYyzUc78j6msWtj3TnGWNJIFlra-sliw5kk"
         />
-      </Helmet>.
-      <div style={{textAlign : 'center' }}>
+      </Helmet>
+      <TopBar />
+      <div style={{width: '100%',paddingTop:'30vh', textAlign:'-webkit-center'}}>
       <LandingText />
       </div>
-      <div style={{textAlign : 'center' }}>
+      <div style={{width: '100%',paddingTop:'8vh', textAlign:'-webkit-center'}}>
       <LandingSubText />
       </div>
-      <div style={{textAlign : 'center' }}>
+      <div style={{width: '100%' , marginTop:'20vh', textAlign:'-webkit-center'}}>
       <Call />
       </div>
-    </Layout>
+    </div>
   );
 };
 
