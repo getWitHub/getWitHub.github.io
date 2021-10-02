@@ -1,103 +1,133 @@
-import React from 'react';
-import { graphql } from 'gatsby';
-import { Helmet } from 'react-helmet';
+import React from "react";
+import { graphql } from "gatsby";
+import { Helmet } from "react-helmet";
 
-import SEO from '../components/SEO';
-import Layout from '../components/Layout';
-import Twitter from '../components/TwitterIcon';
-import Linkedin from '../components/LinkedinIcon';
-const Team = props => {
+import SEO from "../components/SEO";
+
+import Call from "../components/Call";
+import LandingText from "../components/LandingText";
+import LandingSubText from "../components/LandingSubText";
+import Background from "./../../static/images/background.png";
+import TopBar from "../components/TopBar";
+import Social from "../components/Social";
+import styled from "styled-components";
+
+const GlassBox = styled.div`
+  position: absolute;
+  left: 14.35%;
+  right: 14.41%;
+  top: 17.96%;
+  bottom: 9.91%;
+  z-index: 0;
+  background: transparent;
+  backdrop-filter: blur(4px);
+  border-radius: 40px;
+`;
+
+const Paragraph = styled.p`
+  width: 1016px;
+  height: 190px;
+
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+
+  font-family: Helvetica, Arial, sans-serif, -apple-system;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1.5rem;
+  line-height: 37px;
+
+  color: #000000;
+`;
+
+const Team = (props) => {
   const team = props.data.team.edges;
   const { intro } = props.data;
-  const introImageClasses = `intro-image ${intro.frontmatter.intro_image_absolute && 'intro-image-absolute'} ${intro.frontmatter.intro_image_hide_on_mobile && 'intro-image-hide-mobile'}`;
 
   return (
-    <Layout bodyClass="page-teams">
+    <div
+      style={{
+        width: "100%",
+        height: "100vh",
+        backgroundImage: `url(${Background})`,
+      }}
+    >
       <SEO title="Team" />
       <Helmet>
         <meta name="title" content="WitHub-Highlight the Web" />
-        <meta name="twitter:image" content="https://www.getwithub.com/images/twitter-card.png"></meta>
-        <meta name="google-site-verification" content="o3HIEwGXZYyzUc78j6msWtj3TnGWNJIFlra-sliw5kk" />
+        <meta
+          name="twitter:image"
+          content="https://www.getwithub.com/images/twitter-card.png"
+        ></meta>
+        <meta
+          name="google-site-verification"
+          content="o3HIEwGXZYyzUc78j6msWtj3TnGWNJIFlra-sliw5kk"
+        />
       </Helmet>
-      <div className="intro">
-        <div className="container">
-          <div className="row justify-content-start">
-            <div className="col-12 col-md-7 col-lg-6 order-2 order-md-1">
-              <div dangerouslySetInnerHTML={{ __html: intro.html }} />
-            </div>
-            {intro.frontmatter.intro_image && (
-              <div className="col-12 col-md-5 col-lg-6 order-1 order-md-2 position-relative">
-                <img alt={intro.frontmatter.title} className={introImageClasses} src={intro.frontmatter.intro_image} />
-              </div>
-            )}
-          </div>
-        </div>
+      <div style={{ width: "100%", paddingTop: "0", textAlign: "end" }}>
+        <TopBar />
       </div>
-
-      <div className="container">
-        <div className="row">
-          {team.filter(edge => (edge.node.frontmatter.promoted)).map(({ node }) => (
-            <div key={node.id} className="col-12 col-md-6 mb-2">
-              <div className="team team-summary team-summary-large">
-                {node.frontmatter.image && (
-                  <div className="team-image">
-                    <img alt={`photo of ${node.frontmatter.title}`} className="img-fluid mb-2" src={node.frontmatter.image} />
-                  </div>
-                )}
-                <div className="team-meta">
-                  <h2 className="team-name">{node.frontmatter.title}</h2>
-                  <p className="team-description">{node.frontmatter.jobtitle}</p>
-                  {node.frontmatter.linkedinurl && (
-                    <a key={node.id} href={node.frontmatter.linkedinurl}>
-                      <Linkedin />
-                    </a>
-                  )}
-                  {node.frontmatter.twitterurl && (
-                    <a className="team-twitter" key={node.id} href={node.frontmatter.twitterurl}>
-                      <Twitter />
-                    </a>
-                  )}                  
-                </div>
-                <div className="team-content">
-                  <p>{node.excerpt}</p>
-                </div>
-              </div>
-            </div>
-          ))}
+      <GlassBox>
+        <div
+          style={{
+            width: "100%",
+            paddingTop: "5vh",
+            textAlign: "-webkit-center",
+          }}
+        >
+          <LandingText />
         </div>
-        <div className="row pt-6 pb-6">
-          {team.filter(edge => (!edge.node.frontmatter.promoted)).map(({ node }) => (
-            <div key={node.id} className="col-12 col-md-6 mb-2">
-              <div className="team team-summary">
-                {node.frontmatter.image && (
-                  <div className="team-image">
-                    <img alt={`photo of ${node.frontmatter.title}`} className="img-fluid mb-2" src={node.frontmatter.image} />
-                  </div>
-                )}
-                <div className="team-meta">
-                  <h2 className="team-name">{node.frontmatter.title}</h2>
-                  <p className="team-description">{node.frontmatter.jobtitle}</p>
-                  {node.frontmatter.linkedinurl && (
-                    <a className="team-linkedin" key={node.id} href={node.frontmatter.linkedinurl}>LinkedIn</a>
-                  )}
-                  {node.frontmatter.twitterurl && (
-                    <a className="team-twitter" key={node.id} href={node.frontmatter.twitterurl}>Twitter</a>
-                  )}
-                </div>
-              </div>
-            </div>
-          ))}
+        <div
+          style={{
+            width: "100%",
+            paddingTop: "5vh",
+            textAlign: "-webkit-center",
+          }}
+        >
+          <Paragraph>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book. It has survived not
+            only five centurie
+          </Paragraph>
         </div>
-      </div>
-
-    </Layout>
+        <div
+          style={{
+            width: "100%",
+            paddingTop: "2vh",
+            textAlign: "-webkit-center",
+          }}
+        >
+          <Paragraph>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book. It has survived not
+            only five centurie
+          </Paragraph>
+        </div>
+      </GlassBox>
+        <div
+          style={{
+            paddingTop: '93vh',
+            paddingLeft: '90vw',
+            width: '20vw',
+          }}
+        >
+          <Social />
+        </div>
+    </div>
   );
 };
 
 export const query = graphql`
   query TeamQuery {
     team: allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/team\/.*/" } }
+      filter: { fileAbsolutePath: { regex: "/team/.*/" } }
       sort: { fields: [frontmatter___date], order: DESC }
     ) {
       edges {
@@ -118,7 +148,7 @@ export const query = graphql`
         }
       }
     }
-    intro: markdownRemark(fileAbsolutePath: {regex: "/(team.md)/"}) {
+    intro: markdownRemark(fileAbsolutePath: { regex: "/(team.md)/" }) {
       html
       frontmatter {
         image
@@ -130,6 +160,5 @@ export const query = graphql`
     }
   }
 `;
-
 
 export default Team;

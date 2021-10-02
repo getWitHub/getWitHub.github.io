@@ -3,7 +3,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 import styled from 'styled-components';
 
 const SocialStyle = styled.div`
-  display: block;
+  display: flex;
   img {
     width: 24px;
     height: 24px;

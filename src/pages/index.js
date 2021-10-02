@@ -17,8 +17,8 @@ const GlassBox = styled.div`
 position: absolute;
 left: 14.35%;
 right: 14.41%;
-top: 17.96%;
-bottom: 9.91%;
+top: 47.96%;
+bottom: 19.91%;
 z-index:0;
 background: rgba(245,245,245,0.1);
 box-shadow: 0px 0px 7px 3px #cccccc;
@@ -51,23 +51,29 @@ const Home = (props) => {
       <div style={{width: '100%',paddingTop:'0', textAlign: 'end'}}>
       <TopBar />
       </div>
-      <GlassBox>
-      <div style={{width: '100%',paddingTop:'20vh', textAlign:'-webkit-center'}}>
+      <div style={{width: '100%',paddingTop:'25vh', textAlign:'-webkit-center'}}>
       <LandingText />
       </div>
-      <div style={{width: '100%',paddingTop:'8vh', textAlign:'-webkit-center'}}>
+      <div style={{width: '100%',paddingTop:'5vh', textAlign:'-webkit-center'}}>
       <LandingSubText />
       </div>
+      <GlassBox>
       <div style={{width: '100%' , paddingTop:'10vh', textAlign:'-webkit-center'}}>
       <Call />
       </div>
       <div style={{width: '100%' , paddingTop:'2vh', textAlign:'-webkit-center'}}>
       <a style={{color: '#6B4CAB'}} href="www.google.com">...or talk to us first.</a>
       </div>
-      <div style={{width: '100%' , paddingTop:'7vh', textAlign:'-webkit-center'}}>
-      <Social />
-      </div>
       </GlassBox>
+      <div
+          style={{
+            paddingTop: '55vh',
+            paddingLeft: '90vw',
+            width: '20vw',
+          }}
+        >
+          <Social />
+        </div>
     </div>
   );
 };
