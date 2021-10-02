@@ -34,7 +34,9 @@ const Home = (props) => {
           content="o3HIEwGXZYyzUc78j6msWtj3TnGWNJIFlra-sliw5kk"
         />
       </Helmet>
+      <div style={{width: '100%',paddingTop:'0'}}>
       <TopBar />
+      </div>
       <div style={{width: '100%',paddingTop:'30vh', textAlign:'-webkit-center'}}>
       <LandingText />
       </div>
