@@ -10,7 +10,7 @@ import LandingText from "../components/LandingText";
 import LandingSubText from "../components/LandingSubText";
 import Background from './../../static/images/background.png';
 import TopBar from "../components/TopBar";
-
+import Social from "../components/Social";
 
 const Home = (props) => {
   const intro = props.data.intro;
@@ -43,8 +43,14 @@ const Home = (props) => {
       <div style={{width: '100%',paddingTop:'8vh', textAlign:'-webkit-center'}}>
       <LandingSubText />
       </div>
-      <div style={{width: '100%' , marginTop:'20vh', textAlign:'-webkit-center'}}>
+      <div style={{width: '100%' , paddingTop:'15vh', textAlign:'-webkit-center'}}>
       <Call />
+      </div>
+      <div style={{width: '100%' , paddingTop:'3vh', textAlign:'-webkit-center'}}>
+      <a style={{color: '#6B4CAB'}} href="www.google.com">...or talk to us first.</a>
+      </div>
+      <div style={{width: '100%' , paddingTop:'10vh', textAlign:'-webkit-center'}}>
+      <Social />
       </div>
     </div>
   );
