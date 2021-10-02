@@ -5,8 +5,10 @@ import styled from 'styled-components';
 const SocialStyle = styled.div`
   display: block;
   img {
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
+    backdrop-filter: blur(4px);
+
   }
   a {
     padding: 10px;

@@ -15,8 +15,8 @@ import styled from "styled-components";
 
 const GlassBox = styled.div`
 position: absolute;
-left: 16.35%;
-right: 16.41%;
+left: 14.35%;
+right: 14.41%;
 top: 17.96%;
 bottom: 9.91%;
 z-index:0;
@@ -64,7 +64,7 @@ const Home = (props) => {
       <div style={{width: '100%' , paddingTop:'2vh', textAlign:'-webkit-center'}}>
       <a style={{color: '#6B4CAB'}} href="www.google.com">...or talk to us first.</a>
       </div>
-      <div style={{width: '100%' , paddingTop:'10vh', textAlign:'-webkit-center'}}>
+      <div style={{width: '100%' , paddingTop:'7vh', textAlign:'-webkit-center'}}>
       <Social />
       </div>
       </GlassBox>
