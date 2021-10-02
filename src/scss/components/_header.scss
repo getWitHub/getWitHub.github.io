@@ -1,16 +1,24 @@
 .header {
   color: #4460D9;
-  background-color: #ffffff;
+  background-color: transparent;
   display: flex;
   justify-content: space-between;
   align-items: center;
   // box-shadow: 0 1px 15px rgba(50, 50, 93, 0.2);
-  border-bottom: 1px solid #f6f7ff;
   padding: 10px 0px;
   .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+  .cta2 {
+    display: flex;
+flex-direction: row;
+align-items: flex-end;
+  }
+  .logo {
+    display: flex;
+    align-items: flex-start;
   }
   &.header-absolute {
     position: absolute;
